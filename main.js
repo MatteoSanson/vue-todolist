@@ -1,13 +1,30 @@
 'use strict';
 
-console.log('sto funzionando');
-
 const { createApp } = Vue;
 
+const toDoList = [
+    {
+        text: 'Mangiare gelato',
+        done: true,
+    },
+    {
+        text: 'Fare la spesa',
+        done: true,
+    },
+    {
+        text: 'Andare a correre',
+        done: true,
+    },
+    {
+        text: 'Fare il bucato',
+        done: false,
+    },
+    
+]
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        toDoList: toDoList,
       }
     }
   }).mount('#app')
