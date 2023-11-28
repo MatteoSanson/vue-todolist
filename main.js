@@ -25,13 +25,16 @@ const toDoList = [
     },
 ]; 
 
-  createApp({
+createApp({
     data() {
       return {
         toDoList: toDoList,
       }
     },
     methods: {
-        
+        cancel(index){
+            console.log('Hai cliccato', index);
+            this.toDoList.splice(index, 1);
+        }
     },
-  }).mount('#app')
+}).mount('#app')
