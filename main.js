@@ -29,12 +29,20 @@ createApp({
     data() {
       return {
         toDoList: toDoList,
+        newToDo: "",
       }
     },
     methods: {
         cancel(index){
             console.log('Hai cliccato', index);
             this.toDoList.splice(index, 1);
-        }
+        },
+        addToDo() {
+            const toDoText = this.newToDo.trim();
+            if (toDoText !== "") {
+                this.toDoList.push({ text: toDoText, done: false });
+            }
+            this.newToDo = "";
+          },
     },
 }).mount('#app')
