@@ -31,7 +31,7 @@ const toDoList = [
         toDoList: toDoList,
       }
     },
-    methods() {
-
-    }
+    methods: {
+        
+    },
   }).mount('#app')
