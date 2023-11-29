@@ -47,10 +47,9 @@
                         <ul class="list-group" v-if="toDoList.length > 0">
                             <li
                                 class="list-group-item d-flex justify-content-between"
-                                v-for="(toDo, index) in toDoList"
-                                :class="{ 'text-decoration-line-through': toDo.done }">
-                                <div @click="changeStat(index)">
-                                    {{ toDo.text }}
+                                v-for="(toDo, index) in toDoList">
+                                <div :class="{ 'text-decoration-line-through': toDo.done }" @click="changeStat(index)">
+                                    {{ index + 1 }} - {{ toDo.text }}
                                 </div>
 
                                 <div class="text-danger col-1 text-center">
