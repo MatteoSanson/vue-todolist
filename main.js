@@ -43,8 +43,8 @@ createApp({
                 this.toDoList.push({ text: toDoText, done: false });
             }
             this.newToDo = "";
-          },
-          changeStat(index) {
+        },
+        changeStat(index) {
             console.log('click sul div', this.toDoList[index]);
             this.toDoList[index].done = !this.toDoList[index].done;
         },

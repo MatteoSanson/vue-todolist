@@ -32,7 +32,7 @@
                         <div class="input-group mb-3">
                             <input v-model="newToDo"
                             type="text" class="form-control shadow-none"
-                            placeholder="Insert your todo..."
+                            placeholder="Inserisci il tuo todo..."
                             aria-label="Recipient's username"
                             aria-describedby="basic-addon2"
                             @keyup.enter="addToDo">
@@ -44,7 +44,7 @@
                             </span>
                         </div>
 
-                        <ul class="list-group">
+                        <ul class="list-group" v-if="toDoList.length > 0">
                             <li
                                 class="list-group-item d-flex justify-content-between"
                                 v-for="(toDo, index) in toDoList"
@@ -58,6 +58,9 @@
                                 </div>
                             </li>
                         </ul>
+                        <div v-else class="alert alert-info" role="alert">
+                            Non ci sono todo
+                        </div>
                         
                     </div>
                 </div>
